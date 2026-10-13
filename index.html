@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Faça seu gatinho viver 20 anos</title>
+<meta name="description" content="Os 17 erros do dia a dia que adoecem seu gato aos poucos, e como corrigir cada um. Guia prático de 40 páginas.">
+<meta property="og:title" content="Faça seu gatinho viver 20 anos">
+<meta property="og:description" content="17 erros do dia a dia que adoecem seu gato aos poucos (e como corrigir cada um).">
+<meta property="og:image" content="img/mockup.webp">
+<link rel="icon" href="img/favicon.png">
+<link rel="preload" href="fonts/ArchivoBlack.ttf" as="font" crossorigin>
+<style>
+@font-face{font-family:Black;src:url(fonts/ArchivoBlack.ttf);font-display:swap}
+@font-face{font-family:Corpo;src:url(fonts/Archivo-400.ttf);font-weight:400;font-display:swap}
+@font-face{font-family:Corpo;src:url(fonts/Archivo-600.ttf);font-weight:600;font-display:swap}
+@font-face{font-family:Mono;src:url(fonts/SpaceMono-700.ttf);font-weight:700;font-display:swap}
+:root{--am:#ffe600;--pr:#0a0a0a;--b:4px;--w:1120px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--am)}
+body{margin:0;background:var(--am);color:var(--pr);font:400 18px/1.5 Corpo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.w{max-width:var(--w);margin:0 auto;padding:0 24px}
+.mono{font:700 13px/1.2 Mono,monospace;text-transform:uppercase;letter-spacing:.06em}
+.tag{display:inline-block;background:var(--pr);color:var(--am);padding:7px 12px}
+h1,h2,h3{font-family:Black,Impact,sans-serif;text-transform:uppercase;letter-spacing:-.02em;margin:0;line-height:.92;font-weight:400}
+
+/* botão */
+.btn{display:inline-flex;align-items:center;gap:14px;background:var(--pr);color:var(--am);text-decoration:none;font:400 22px/1 Black,sans-serif;text-transform:uppercase;
+ padding:22px 30px;border:var(--b) solid var(--pr);box-shadow:8px 8px 0 #fff;transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:11px 11px 0 #fff}
+.btn:active{transform:translate(4px,4px);box-shadow:4px 4px 0 #fff}
+.btn .seta{transition:transform .15s}.btn:hover .seta{transform:translateX(5px)}
+.btn.am{background:var(--am);color:var(--pr);box-shadow:8px 8px 0 var(--pr)}
+.btn.am:hover{box-shadow:11px 11px 0 var(--pr)}
+.sob{margin-top:16px}
+
+/* topo */
+.top{border-bottom:var(--b) solid var(--pr);background:var(--pr);color:var(--am)}
+.top .w{display:flex;justify-content:space-between;align-items:center;height:44px}
+
+/* hero */
+.hero{border-bottom:var(--b) solid var(--pr);overflow:hidden}
+.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:56px;padding-bottom:64px}
+.hero h1{font-size:clamp(46px,7.2vw,92px);margin:20px 0 22px}
+.hero h1 .n{display:inline-block;background:var(--pr);color:var(--am);padding:0 .12em;transform:rotate(-2deg)}
+.hero p.lead{font-size:21px;line-height:1.4;max-width:30ch;margin:0 0 30px;font-weight:600}
+.mock{position:relative}
+.mock img{width:100%;max-width:470px;margin-left:auto;filter:drop-shadow(18px 22px 0 rgba(0,0,0,.9));animation:flutua 6s ease-in-out infinite}
+@keyframes flutua{50%{transform:translateY(-10px) rotate(.6deg)}}
+.selo{position:absolute;left:2%;bottom:16%;width:132px;height:132px;border-radius:50%;background:#fff;border:var(--b) solid var(--pr);display:grid;place-items:center;text-align:center;transform:rotate(-12deg);font:700 12px/1.25 Mono,monospace;text-transform:uppercase}
+.selo b{display:block;font:400 38px/1 Black,sans-serif}
+
+/* faixa */
+.faixa{background:var(--pr);color:var(--am);overflow:hidden;border-bottom:var(--b) solid var(--pr);white-space:nowrap}
+.faixa div{display:inline-block;padding:16px 0;animation:corre 32s linear infinite;font:700 15px Mono,monospace;letter-spacing:.08em}
+.faixa span{margin:0 18px}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+/* seções */
+section.s{padding:96px 0;border-bottom:var(--b) solid var(--pr)}
+section.bco{background:#fff}
+.s h2{font-size:clamp(38px,5.4vw,68px);margin:16px 0 0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.cx{border:var(--b) solid var(--pr);background:#fff;padding:26px;box-shadow:8px 8px 0 var(--pr)}
+.cx .num{font:400 44px/1 Black,sans-serif}
+.cx h3{font-size:22px;margin:14px 0 8px;line-height:1}
+.cx p{margin:0;font-size:16.5px}
+
+/* erros */
+.erros{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:48px;border:var(--b) solid var(--pr);background:#fff}
+.erros li{list-style:none;display:flex;gap:18px;align-items:center;padding:20px 24px;border-bottom:var(--b) solid var(--pr);font:600 19px/1.25 Corpo}
+.erros li:nth-child(odd){border-right:var(--b) solid var(--pr)}
+.erros li b{font:700 13px Mono,monospace;background:var(--am);border:2px solid var(--pr);padding:5px 7px;flex:none}
+.erros li.oc{filter:blur(5px);user-select:none}
+.erros ul{display:contents}
+.mais{grid-column:1/-1;padding:22px 24px;background:var(--pr);color:var(--am);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.mais strong{font:400 26px/1 Black,sans-serif;text-transform:uppercase}
+
+/* por dentro */
+.paginas{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:52px;align-items:start}
+.paginas figure{margin:0;border:var(--b) solid var(--pr);box-shadow:10px 10px 0 var(--pr);background:#fff;transition:transform .2s}
+.paginas figure:nth-child(1){transform:rotate(-2deg)}.paginas figure:nth-child(2){transform:translateY(26px)}.paginas figure:nth-child(3){transform:rotate(2deg)}
+.paginas figure:hover{transform:rotate(0) translateY(-6px)}
+.paginas figcaption{border-top:var(--b) solid var(--pr);padding:10px 12px;background:var(--am)}
+.estr{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:80px;border:var(--b) solid var(--pr)}
+.estr div{padding:22px;border-right:var(--b) solid var(--pr);background:#fff}.estr div:last-child{border-right:0;background:var(--pr);color:var(--am)}
+.estr .mono{display:block;margin-bottom:10px}.estr p{margin:0;font-size:16px}
+
+/* oferta */
+.oferta .w{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+.oferta img{max-width:400px;filter:drop-shadow(14px 16px 0 rgba(0,0,0,.9))}
+.preco{border:var(--b) solid var(--pr);background:#fff;box-shadow:12px 12px 0 var(--pr)}
+.preco .cab{background:var(--pr);color:var(--am);padding:14px 22px}
+.preco .corpo{padding:30px 28px}
+.preco ul{list-style:none;margin:0 0 26px;padding:0}
+.preco li{display:flex;gap:12px;margin-bottom:12px;font-size:17px;font-weight:600}
+.preco li::before{content:"";width:16px;height:16px;flex:none;margin-top:5px;background:var(--pr)}
+.valor{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+.valor .rs{font:400 72px/.9 Black,sans-serif}
+.valor .rs small{font-size:32px;vertical-align:top}
+.parc{font-weight:600;margin-bottom:24px}
+.compara{margin:0 0 26px;padding:14px 16px;background:var(--am);border:2px solid var(--pr);font-size:15.5px}
+.garantia{display:flex;gap:16px;align-items:center;margin-top:26px;padding-top:22px;border-top:2px dashed var(--pr);font-size:15.5px}
+.garantia .g{flex:none;width:62px;height:62px;border:var(--b) solid var(--pr);display:grid;place-items:center;font:400 26px Black,sans-serif;transform:rotate(-6deg);background:var(--am)}
+
+/* faq */
+details{border:var(--b) solid var(--pr);background:#fff;margin-bottom:14px}
+summary{cursor:pointer;list-style:none;padding:20px 22px;font:400 21px/1.1 Black,sans-serif;text-transform:uppercase;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:28px;line-height:.8}
+details[open] summary::after{content:"–"}
+details[open] summary{background:var(--pr);color:var(--am)}
+details p{margin:0;padding:18px 22px 22px;font-size:17px}
+.faq{max-width:820px}
+
+/* fim */
+.fim{text-align:center;padding:110px 0}
+.fim h2{font-size:clamp(44px,7vw,96px);margin-bottom:40px}
+.fim p{font-size:21px;font-weight:600;max-width:34ch;margin:24px auto 36px}
+footer{background:var(--pr);color:#bbb;padding:28px 0;font-size:13px}
+footer .w{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* barra fixa celular */
+.fixo{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--pr);border-top:var(--b) solid var(--pr);padding:10px 14px;display:none;align-items:center;justify-content:space-between;gap:12px;transform:translateY(110%);transition:transform .25s}
+.fixo.on{transform:none}
+.fixo .p{color:var(--am);font:400 22px/1 Black,sans-serif}.fixo .p small{display:block;font:700 10px Mono,monospace;color:#ddd;margin-top:3px}
+.fixo a{background:var(--am);color:var(--pr);text-decoration:none;font:400 16px/1 Black,sans-serif;text-transform:uppercase;padding:14px 16px;border:2px solid var(--am)}
+
+/* revela */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+@media (max-width:860px){
+ body{font-size:17px}
+ .hero .w{grid-template-columns:1fr;padding-top:32px;gap:10px}
+ .mock{order:-1}.mock img{max-width:300px;margin:0 auto}
+ .selo{width:100px;height:100px;font-size:10px;left:4%}.selo b{font-size:28px}
+ .grid3,.paginas,.erros,.oferta .w{grid-template-columns:1fr}
+ .erros li:nth-child(odd){border-right:0}
+ .paginas figure:nth-child(2){transform:none}
+ .estr{grid-template-columns:1fr 1fr}.estr div:nth-child(2){border-right:0}.estr div:nth-child(-n+2){border-bottom:var(--b) solid var(--pr)}
+ section.s{padding:68px 0}
+ .btn{font-size:19px;padding:19px 22px;width:100%;justify-content:center}
+ .oferta img{max-width:260px;margin:0 auto}
+ .fixo{display:flex}
+ .top .esc{display:none}
+ footer{padding-bottom:100px}
+}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="w mono"><span>Guia prático / 40 pág.</span><span class="esc">Entrega imediata no e-mail</span></div></div>
+
+<header class="hero">
+ <div class="w">
+  <div>
+   <span class="mono tag">17 erros que ninguém te contou</span>
+   <h1>Faça seu gatinho viver <span class="n">20 anos</span></h1>
+   <p class="lead">Os erros do dia a dia que adoecem seu gato aos poucos, e como corrigir cada um a partir de hoje.</p>
+   <a class="btn" href="https://pay.kiwify.com.br/TJCdFVY" data-cta>Quero o guia <span class="seta">→</span></a>
+   <div class="sob mono">R$ 27,90 · ou 6x de R$ 5,24 · garantia de 7 dias</div>
+  </div>
+  <div class="mock">
+   <img src="img/mockup.webp" width="900" height="1125" alt="Livro Faça seu gatinho viver 20 anos">
+   <div class="selo"><div><b>17</b>erros<br>corrigidos</div></div>
+  </div>
+ </div>
+</header>
+
+<div class="faixa" aria-hidden="true"><div>
+ <span>ÁGUA</span>■<span>RAÇÃO</span>■<span>CAIXA DE AREIA</span>■<span>DENTES</span>■<span>PLANTAS TÓXICAS</span>■<span>REMÉDIOS</span>■<span>PESO</span>■<span>ESTRESSE</span>■<span>VELHICE</span>■<span>CHECK-UP</span>■
+ <span>ÁGUA</span>■<span>RAÇÃO</span>■<span>CAIXA DE AREIA</span>■<span>DENTES</span>■<span>PLANTAS TÓXICAS</span>■<span>REMÉDIOS</span>■<span>PESO</span>■<span>ESTRESSE</span>■<span>VELHICE</span>■<span>CHECK-UP</span>■
+</div></div>
+
+<section class="s bco">
+ <div class="w">
+  <span class="mono tag">O problema</span>
+  <h2 class="rv">Gato não reclama.<br>Ele esconde.</h2>
+  <div class="grid3">
+   <div class="cx rv"><div class="num">01</div><h3>Ele disfarça a dor</h3><p>Por instinto, o gato esconde quando algo não vai bem.</p></div>
+   <div class="cx rv"><div class="num">02</div><h3>O erro se repete</h3><p>Pequenos hábitos, todo santo dia, durante anos.</p></div>
+   <div class="cx rv"><div class="num">03</div><h3>O sinal chega tarde</h3><p>Quando aparece, o problema muitas vezes já vinha de longe.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="s">
+ <div class="w">
+  <span class="mono tag">Você faz algum desses?</span>
+  <h2 class="rv">Erros que parecem<br>carinho</h2>
+  <div class="erros rv"><ul>
+   <li><b>01</b>O potinho de água colado na ração</li>
+   <li><b>02</b>Só ração seca, a vida inteira</li>
+   <li><b>03</b>O pote sempre cheio</li>
+   <li><b>04</b>Comida da nossa mesa (e petisco demais)</li>
+   <li><b>05</b>A caixa de areia que fica pra amanhã</li>
+   <li><b>12</b>Remédio de gente “só um pouquinho”</li>
+   <li class="oc" aria-hidden="true"><b>13</b>Achar que bafo de gato é normal</li>
+   <li class="oc" aria-hidden="true"><b>17</b>Achar que é coisa da idade</li>
+  </ul>
+   <div class="mais"><strong>+ 9 erros dentro do guia</strong><span class="mono">e como corrigir cada um</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="s bco">
+ <div class="w">
+  <span class="mono tag">Por dentro</span>
+  <h2 class="rv">Direto ao ponto.<br>Sem enrolação.</h2>
+  <div class="paginas">
+   <figure class="rv"><img src="img/pag04.webp" width="769" height="1093" alt="Página do erro nº 01" loading="lazy"><figcaption class="mono">O erro e por que faz mal</figcaption></figure>
+   <figure class="rv"><img src="img/pag05.webp" width="769" height="1093" alt="Página Como corrigir" loading="lazy"><figcaption class="mono">Como corrigir, passo a passo</figcaption></figure>
+   <figure class="rv"><img src="img/pag38.webp" width="769" height="1093" alt="Checklist do gato de 20 anos" loading="lazy"><figcaption class="mono">Checklist pra geladeira</figcaption></figure>
+  </div>
+  <div class="estr rv">
+   <div><span class="mono">01 · O erro</span><p>A cena que acontece em quase toda casa.</p></div>
+   <div><span class="mono">02 · O porquê</span><p>O que isso faz com o corpo do gato.</p></div>
+   <div><span class="mono">03 · A correção</span><p>O que mudar hoje, sem gastar muito.</p></div>
+   <div><span class="mono">04 · O alerta</span><p>O sinal de que é hora do veterinário.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="s oferta" id="comprar">
+ <div class="w">
+  <img src="img/mockup.webp" width="900" height="1125" alt="" loading="lazy" class="rv">
+  <div class="preco rv">
+   <div class="cab mono">Acesso imediato · PDF de 40 páginas</div>
+   <div class="corpo">
+    <ul>
+     <li>Os 17 erros, cada um com a correção</li>
+     <li>Sinais de alerta pra saber quando correr pro veterinário</li>
+     <li>Checklist do gato de 20 anos (dia, semana, mês, ano)</li>
+     <li>Ficha do seu gato: peso, vacinas e cuidados</li>
+    </ul>
+    <div class="valor"><div class="rs"><small>R$</small>27,90</div></div>
+    <div class="parc">ou 6x de R$ 5,24 no cartão</div>
+    <div class="compara">Menos que um pacote de ração.</div>
+    <a class="btn" href="https://pay.kiwify.com.br/TJCdFVY" data-cta>Quero o guia agora <span class="seta">→</span></a>
+    <div class="garantia"><div class="g">7</div><div><b>Garantia de 7 dias.</b> Não gostou? Pede o reembolso e recebe 100% do valor de volta.</div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="s bco">
+ <div class="w faq">
+  <span class="mono tag">Dúvidas</span>
+  <h2 class="rv" style="margin-bottom:40px">Perguntas rápidas</h2>
+  <details><summary>Como eu recebo?</summary><p>Logo depois do pagamento, o acesso ao PDF chega no seu e-mail. Dá pra ler no celular, no computador ou imprimir.</p></details>
+  <details><summary>Serve pra filhote e pra gato idoso?</summary><p>Sim. Os cuidados valem pra qualquer idade, e tem um capítulo só sobre o gato idoso.</p></details>
+  <details><summary>Substitui o veterinário?</summary><p>Não. O guia te ajuda a evitar os erros do dia a dia e a perceber cedo quando é hora de levar ao veterinário.</p></details>
+  <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias pra pedir o reembolso e recebe todo o valor de volta.</p></details>
+ </div>
+</section>
+
+<section class="fim">
+ <div class="w">
+  <h2 class="rv">Mais anos<br>com ele.</h2>
+  <a class="btn" href="https://pay.kiwify.com.br/TJCdFVY" data-cta>Começar hoje · R$ 27,90 <span class="seta">→</span></a>
+ </div>
+</section>
+
+<footer><div class="w"><span>© 2026 Faça seu gatinho viver 20 anos</span><span>Conteúdo informativo. Não substitui a consulta com um médico-veterinário.</span></div></footer>
+
+<div class="fixo" id="fixo"><div class="p">R$ 27,90<small>OU 6X DE R$ 5,24</small></div><a href="https://pay.kiwify.com.br/TJCdFVY" data-cta>Quero o guia →</a></div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.rv').forEach(e=>e.classList.add('on')),3500);
+const hero=document.querySelector('.hero'),oferta=document.getElementById('comprar'),fixo=document.getElementById('fixo');
+const vis={h:true,o:false};
+new IntersectionObserver(es=>{es.forEach(e=>{if(e.target===hero)vis.h=e.isIntersecting;else vis.o=e.isIntersecting});fixo.classList.toggle('on',!vis.h&&!vis.o)}).observe(hero);
+new IntersectionObserver(es=>{es.forEach(e=>{vis.o=e.isIntersecting});fixo.classList.toggle('on',!vis.h&&!vis.o)}).observe(oferta);
+// repassa UTMs da página para o checkout
+const q=location.search;if(q)document.querySelectorAll('[data-cta]').forEach(a=>{a.href+=(a.href.includes('?')?'&':'?')+q.slice(1)});
+</script>
+</body>
+</html>
